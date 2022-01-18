@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-from email.mime import base
 from typing import Tuple
 
 import sys
