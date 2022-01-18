@@ -1,0 +1,8 @@
+source ~/.zshrc_common
+
+# Nvidia driver switch
+alias to-nvidia="optimus-manager --switch nvidia"
+alias to-intel="optimus-manager --switch intel"
+
+# Yay
+alias yay="paru"

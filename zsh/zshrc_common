@@ -1,0 +1,54 @@
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+zstyle :compinstall filename "$HOME/.zshrc"
+
+autoload -Uz compinit promptinit
+compinit
+promptinit
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+alias ls="ls --color=auto"
+alias sl="ls"
+alias ta="tmux attach"
+alias gc="git commit"
+alias ga="git add"
+alias gs="git status"
+alias gp="git push"
+alias gpl="git pull"
+
+export PIP_USER=yes
+export PATH=$PATH:$HOME/.local/bin:/opt/cuda/bin
+export JUPYTERLAB_DIR=$HOME/.local/share/jupyter/lab
+
+# Fix control + arrow keys
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+# For ibus integration
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+# Jax
+export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda
+export VIRTUAL_ENV_DISABLE_PROMPT=0
+
+# Greetings
+neofetch --disable gpu theme icons memory
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# pywal integration
+cat ~/.cache/wal/sequences
