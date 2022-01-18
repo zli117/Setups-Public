@@ -1,5 +1,7 @@
 # Wayland/Sway Setups
 
+Update theme color with [pywal](https://github.com/dylanaraps/pywal) for [sway](https://github.com/swaywm/sway), terminal, [kitty](https://github.com/kovidgoyal/kitty), [btop](https://github.com/aristocratos/btop) and [vim airline](https://github.com/vim-airline/vim-airline)
+
 ![screenshot](img/img2.png)
 ![screenshot](img/img4.png)
 
