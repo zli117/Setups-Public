@@ -1,5 +1,7 @@
 # Wayland/Sway Setups
 
+![screenshot](img/img2.png)
+
 ## Sway
  - Install `pacman -S sway kitty dmenu grim mako slurp swayidle swaylock wallutils waybar xorg-xwayland brightnessctl pavucontrol ttf-roboto-mono` 
  - Install Nouveau: `pacman -S mesa`
