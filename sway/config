@@ -236,6 +236,14 @@ bar {
     bindsym $sup+s exec systemctl suspend
 
 #########################
+# Remap capslock: 
+#########################
+
+    input "type:keyboard" {
+        xkb_options ctrl:nocaps
+    }
+
+#########################
 # Others:: 
 #########################
 
